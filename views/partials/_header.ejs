@@ -1,0 +1,17 @@
+
+    <h2>Project 2</h2>
+
+<% if (user == undefined) { %>
+    <a href="/register">Register</a>
+    <a href="/login">Login</a>
+<% } else { %>  
+    <h2><%= user.email %></h2>
+    <form action="/logout" method="POST">
+        <input type="submit" value="Log Out">
+    </form> 
+ <% } %>
+
+
+
+
+    

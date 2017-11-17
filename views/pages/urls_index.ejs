@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ../partials/head %>
+</head>
+<body class="container">
+
+<header>
+    <% include ../partials/_header %>        
+</header>
+
+<main>
+        <p>
+            <% for (url in urls) { %>
+                <li>
+                    <%= url %> 
+                    <%= urls[url] %> 
+                    <a href="http://localhost:8080/u/<%=url%>">Go</a>
+                    <a href="http://localhost:8080/urls/<%=url%>">Edit</a>
+                    <form action="/urls/<%=url%>/delete" method="POST">
+                        <input type="submit" value="Delete">
+                    </form>
+                </li>
+            <% } %>
+        </p>
+        <form action="/urls" method="POST" style="margin:150px;">
+            <label for="longURL">Enter a URL:</label>
+            <input id="longURL" type="text" name="longURL" placeholder="http://" style="width: 300px">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</main>
+
+<footer>
+</footer>
+
+</body>
+</html>
