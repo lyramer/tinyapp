@@ -1,17 +1,17 @@
+<!-- views/partials/header.ejs -->
 
-    <h2>Project 2</h2>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <span class="glyphicon glyphicon glyphicon-tree-deciduous"></span>
+        EJS Is Fun
+      </a>
 
-<% if (user == undefined) { %>
-    <a href="/register">Register</a>
-    <a href="/login">Login</a>
-<% } else { %>  
-    <h2><%= user.email %></h2>
-    <form action="/logout" method="POST">
-        <input type="submit" value="Log Out">
-    </form> 
- <% } %>
-
-
-
-
-    
+      <ul class="nav navbar-nav">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

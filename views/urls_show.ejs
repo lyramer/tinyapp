@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ./partials/_head %>
+  </head>
+  <body>
+    <form method="POST" action="/urls/<%=shortURL%>">
+      <input
+        type="text"
+        name="newLongURL"
+        id="newLongURL"
+        value="<%=longURL%>"
+      />
+      <button type="submit">Save</button>
+    </form>
+  </body>
+</html>

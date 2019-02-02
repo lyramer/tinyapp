@@ -1,23 +1,32 @@
+<!-- views/pages/index.ejs -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-</head>
-<body class="container">
+  <head>
+    <% include ../partials/head %>
+  </head>
+  <body class="container">
+    <header>
+      <% include ../partials/header %>
+    </header>
 
-<header>
-    <% include ../partials/_header %>
-</header>
+    <main>
+      <div class="jumbotron">
+        <h2>Variable</h2>
+        <p><%= tagline %></p>
 
-<main>
-    <div class="jumbotron">
-        <h1>TinyApp</h1>
-        
-    </div>
-</main>
+        <h2>Loop</h2>
 
-<footer>
-    <% include ../partials/footer %>
-</footer>
+        <ul>
+          <% drinks.forEach(function(drink) { %>
+          <li><%= drink.name %> - <%= drink.drunkness %></li>
+          <% }); %>
+        </ul>
+      </div>
+    </main>
 
-</body>
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
+  </body>
 </html>

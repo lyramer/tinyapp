@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% include ./partials/_head %>
+  </head>
+  <body>
+    <h3>Your Short URLS</h3>
+    <ul>
+      <% for (var id in urls) { %>
+      <li>
+        <%= urls[id] %>:
+        <a href="/u/<%=id%>"><%= urls[id] %></a>
+        <a href="/urls/<%=id%>" class="button">Edit</a>
+        <form method="POST" action="/urls/<%=id%>/delete">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+      <% } %>
+    </ul>
+  </body>
+</html>

@@ -1,10 +1,20 @@
 {
-  "name": "node-ejs",
+  "name": "tinyapp",
+  "version": "1.0.0",
+  "description": "",
   "main": "server.js",
+  "scripts": {
+    "start": "./node_modules/.bin/nodemon -L server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "cookie-parser": "^1.4.3",
+    "body-parser": "^1.18.3",
     "ejs": "^1.0.0",
-    "express": "^4.16.2"
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
   }
 }
